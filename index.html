@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+<div class="nav-container bg-white">
+    <div class="container-fluid">
+        <!-- nav-bar -->
+        <div class="d-flex flex-wrap align-items-center justify-content-md-between p-1">
+            <div class="col d-flex align-items-center col-md-auto">
+                <div><svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg></div>
+                <img class="ms-2" src="images/logo.png" width="120px" alt="">
+            </div>
+            <div class="col  col-md-6  col-lg-5 d-none d-md-flex align-items-center justify-content-center">
+                <div class="input-group flex-nowrap col-10" style="width: 90;">
+                    <input type="text" class="form-control rounded-0" placeholder="Search">
+                    <button class="input-group-text rounded-0">
+                        <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z" class="style-scope yt-icon"></path></g></svg>
+                    </button>
+                  </div>
+                  <div class="ms-2">
+                    <img style="height: 24px; flex-shrink: 0;" src="images/mic.svg" alt="">
+                  </div>
+                </div>
+            <ul class="nav col-md-auto">
+                <li><a class="nav-link px-2" href="#">
+                    <img style="height: 24px; flex-shrink: 0;" src="images/create.svg" alt="">
+                </a></li>
+                <li><a class="nav-link px-2" href="#">
+                    <img style="height: 24px; flex-shrink: 0;" src="images/notifications.svg" alt="">
+                </a></li>
+                <li><a class="nav-link px-2 " href="#"></a>
+                <img src="images/channel-profile.jpg" width="32px" alt=""></li>
+            </ul>
+         </div>
+</div>
+    <!-- nav-bar-end -->
+   </div>
+   <div class="side-bar ">
+    <ul class="nav nav-pills flex-column mb-auto ">
+        <li class="nav-item">
+          <a href="#" class="nav-link link-dark">
+            <svg style="height: 24px;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon" fill="#030303"><path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon" fill="#030303"></path></g></svg>
+            <span>Home</span> 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g height="24" viewBox="0 0 24 24" width="24" class="style-scope yt-icon" fill="#030303"><path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86l-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z" class="style-scope yt-icon" fill="#030303"></path></g></svg>
+            <span>Shorts</span> 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon" fill="#030303"><path d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z" class="style-scope yt-icon" fill="#030303"></path></g></svg>
+            <span>Subsciptions</span> 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon" fill="#030303"><path d="M10,9.35,15,12l-5,2.65ZM12,6a54.36,54.36,0,0,0-7.56.38A1.53,1.53,0,0,0,3.38,7.44,24.63,24.63,0,0,0,3,12a24.63,24.63,0,0,0,.38,4.56,1.53,1.53,0,0,0,1.06,1.06A54.36,54.36,0,0,0,12,18a54.36,54.36,0,0,0,7.56-.38,1.53,1.53,0,0,0,1.06-1.06A24.63,24.63,0,0,0,21,12a24.63,24.63,0,0,0-.38-4.56,1.53,1.53,0,0,0-1.06-1.06A54.36,54.36,0,0,0,12,6h0m0-1s6.25,0,7.81.42a2.51,2.51,0,0,1,1.77,1.77A25.87,25.87,0,0,1,22,12a25.87,25.87,0,0,1-.42,4.81,2.51,2.51,0,0,1-1.77,1.77C18.25,19,12,19,12,19s-6.25,0-7.81-.42a2.51,2.51,0,0,1-1.77-1.77A25.87,25.87,0,0,1,2,12a25.87,25.87,0,0,1,.42-4.81A2.51,2.51,0,0,1,4.19,5.42C5.75,5,12,5,12,5Z" class="style-scope yt-icon" fill="#030303"></path></g></svg>
+            <span>Originals</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon" fill="#030303"><path d="M10 9.35L15 12l-5 2.65zM12 7a5 5 0 105 5 5 5 0 00-5-5m0-1a6 6 0 11-6 6 6 6 0 016-6zm0-3a9 9 0 109 9 9 9 0 00-9-9m0-1A10 10 0 112 12 10 10 0 0112 2z" class="style-scope yt-icon" fill="#030303"></path></g></svg>
+            <span>Youtube Music</span>
+          </a>
+        </li>
+         <hr> 
+         <!--A LINE HERE MA GUY -->
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z" class="style-scope yt-icon"></path></g></svg>
+              <span>Library</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,2C8.73,2,5.8,3.44,4,5.83V3.02H2V9h6V7H5.62 C7.08,5.09,9.36,4,12,4c4.41,0,8,3.59,8,8s-3.59,8-8,8s-8-3.59-8-8H2c0,5.51,4.49,10,10,10s10-4.49,10-10S17.51,2,12,2z" class="style-scope yt-icon"></path></g></svg>
+              <span>History</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M10,8l6,4l-6,4V8L10,8z M21,3v18H3V3H21z M20,4H4v16h16V4z" class="style-scope yt-icon"></path></g></svg>
+              <span>Your Videos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z" class="style-scope yt-icon"></path></g></svg>
+              <span>Watch Later</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M17 18V19H6V18H17ZM16.5 11.4L15.8 10.7L12 14.4V4H11V14.4L7.2 10.6L6.5 11.3L11.5 16.3L16.5 11.4Z" class="style-scope yt-icon"></path></g></svg>
+              <span>Downloads</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M8,7c0,0.55-0.45,1-1,1S6,7.55,6,7c0-0.55,0.45-1,1-1S8,6.45,8,7z M7,16c-0.55,0-1,0.45-1,1c0,0.55,0.45,1,1,1s1-0.45,1-1 C8,16.45,7.55,16,7,16z M10.79,8.23L21,18.44V20h-3.27l-5.76-5.76l-1.27,1.27C10.89,15.97,11,16.47,11,17c0,2.21-1.79,4-4,4 c-2.21,0-4-1.79-4-4c0-2.21,1.79-4,4-4c0.42,0,0.81,0.08,1.19,0.2l1.37-1.37l-1.11-1.11C8,10.89,7.51,11,7,11c-2.21,0-4-1.79-4-4 c0-2.21,1.79-4,4-4c2.21,0,4,1.79,4,4C11,7.43,10.91,7.84,10.79,8.23z M10.08,8.94L9.65,8.5l0.19-0.58C9.95,7.58,10,7.28,10,7 c0-1.65-1.35-3-3-3S4,5.35,4,7c0,1.65,1.35,3,3,3c0.36,0,0.73-0.07,1.09-0.21L8.7,9.55l0.46,0.46l1.11,1.11l0.71,0.71l-0.71,0.71 L8.9,13.91l-0.43,0.43l-0.58-0.18C7.55,14.05,7.27,14,7,14c-1.65,0-3,1.35-3,3c0,1.65,1.35,3,3,3s3-1.35,3-3 c0-0.38-0.07-0.75-0.22-1.12l-0.25-0.61L10,14.8l1.27-1.27l0.71-0.71l0.71,0.71L18.15,19H20v-0.15L10.08,8.94z M17.73,4H21v1.56 l-5.52,5.52l-2.41-2.41L17.73,4z M18.15,5l-3.67,3.67l1,1L20,5.15V5H18.15z" class="style-scope yt-icon"></path></g></svg>
+              <span>Your clips</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+                <svg style="height: 24px; flex-shrink: 0;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,15.7L5.6,9.4l0.7-0.7l5.6,5.6l5.6-5.6l0.7,0.7L12,15.7z" class="style-scope yt-icon"></path></g></svg>
+              <span>Show more</span>
+            </a>
+          </li>
+          <hr />
+        <li class="nav-item">
+            <div class="nav-link p-0 text-dark">
+                <span class="text-uppercase">More From YOUTUBE</span>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M10,9.35,15,12l-5,2.65ZM12,6a54.36,54.36,0,0,0-7.56.38A1.53,1.53,0,0,0,3.38,7.44,24.63,24.63,0,0,0,3,12a24.63,24.63,0,0,0,.38,4.56,1.53,1.53,0,0,0,1.06,1.06A54.36,54.36,0,0,0,12,18a54.36,54.36,0,0,0,7.56-.38,1.53,1.53,0,0,0,1.06-1.06A24.63,24.63,0,0,0,21,12a24.63,24.63,0,0,0-.38-4.56,1.53,1.53,0,0,0-1.06-1.06A54.36,54.36,0,0,0,12,6h0m0-1s6.25,0,7.81.42a2.51,2.51,0,0,1,1.77,1.77A25.87,25.87,0,0,1,22,12a25.87,25.87,0,0,1-.42,4.81,2.51,2.51,0,0,1-1.77,1.77C18.25,19,12,19,12,19s-6.25,0-7.81-.42a2.51,2.51,0,0,1-1.77-1.77A25.87,25.87,0,0,1,2,12a25.87,25.87,0,0,1,.42-4.81A2.51,2.51,0,0,1,4.19,5.42C5.75,5,12,5,12,5Z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Youtube Premium</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M10,12H8v2H6v-2H4v-2h2V8h2v2h2V12z M17,12.5c0-0.83-0.67-1.5-1.5-1.5S14,11.67,14,12.5c0,0.83,0.67,1.5,1.5,1.5 S17,13.33,17,12.5z M20,9.5C20,8.67,19.33,8,18.5,8S17,8.67,17,9.5c0,0.83,0.67,1.5,1.5,1.5S20,10.33,20,9.5z M16.97,5.15l-4.5,2.53 l-0.49,0.27l-0.49-0.27l-4.5-2.53L3,7.39v6.43l8.98,5.04l8.98-5.04V7.39L16.97,5.15 M16.97,4l4.99,2.8v7.6L11.98,20L2,14.4V6.8 L6.99,4l4.99,2.8L16.97,4L16.97,4z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Gaming</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M14,12c0,1.1-0.9,2-2,2s-2-0.9-2-2s0.9-2,2-2S14,10.9,14,12z M8.48,8.45L7.77,7.75C6.68,8.83,6,10.34,6,12 s0.68,3.17,1.77,4.25l0.71-0.71C7.57,14.64,7,13.39,7,12S7.57,9.36,8.48,8.45z M16.23,7.75l-0.71,0.71C16.43,9.36,17,10.61,17,12 s-0.57,2.64-1.48,3.55l0.71,0.71C17.32,15.17,18,13.66,18,12S17.32,8.83,16.23,7.75z M5.65,5.63L4.95,4.92C3.13,6.73,2,9.24,2,12 s1.13,5.27,2.95,7.08l0.71-0.71C4.02,16.74,3,14.49,3,12S4.02,7.26,5.65,5.63z M19.05,4.92l-0.71,0.71C19.98,7.26,21,9.51,21,12 s-1.02,4.74-2.65,6.37l0.71,0.71C20.87,17.27,22,14.76,22,12S20.87,6.73,19.05,4.92z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Live</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M17 3V5V6V10V10.51L16.99 10.97C16.94 13.1 15.66 14.94 13.74 15.67H13.72L13.66 15.69L13 15.95V16.65V19V20H14V21H15H10V20H11V19V16.65V15.95L10.34 15.71L10.26 15.68H10.25C8.33 14.95 7.05 13.11 7 10.98V10.51V10V6V5V3H17ZM18 2H6V5H4V6V10V11H6.01C6.07 13.53 7.63 15.78 9.97 16.64C9.98 16.64 9.99 16.64 10 16.65V19H9V20H8V22H16V20H15V19H14V16.65C14.01 16.65 14.02 16.65 14.03 16.64C16.36 15.78 17.93 13.54 17.99 11H20V10V6V5H18V2ZM18 10V6H19V10H18ZM5 10V6H6V10H5Z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Sports</span>
+            </a>
+        </li>
+        <hr />
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,8c-2.21,0-4,1.79-4,4s1.79,4,4,4s4-1.79,4-4 S14.21,8,12,8L12,8z M13.22,3l0.55,2.2l0.13,0.51l0.5,0.18c0.61,0.23,1.19,0.56,1.72,0.98l0.4,0.32l0.5-0.14l2.17-0.62l1.22,2.11 l-1.63,1.59l-0.37,0.36l0.08,0.51c0.05,0.32,0.08,0.64,0.08,0.98s-0.03,0.66-0.08,0.98l-0.08,0.51l0.37,0.36l1.63,1.59l-1.22,2.11 l-2.17-0.62l-0.5-0.14l-0.4,0.32c-0.53,0.43-1.11,0.76-1.72,0.98l-0.5,0.18l-0.13,0.51L13.22,21h-2.44l-0.55-2.2l-0.13-0.51 l-0.5-0.18C9,17.88,8.42,17.55,7.88,17.12l-0.4-0.32l-0.5,0.14l-2.17,0.62L3.6,15.44l1.63-1.59l0.37-0.36l-0.08-0.51 C5.47,12.66,5.44,12.33,5.44,12s0.03-0.66,0.08-0.98l0.08-0.51l-0.37-0.36L3.6,8.56l1.22-2.11l2.17,0.62l0.5,0.14l0.4-0.32 C8.42,6.45,9,6.12,9.61,5.9l0.5-0.18l0.13-0.51L10.78,3H13.22 M14,2h-4L9.26,4.96c-0.73,0.27-1.4,0.66-2,1.14L4.34,5.27l-2,3.46 l2.19,2.13C4.47,11.23,4.44,11.61,4.44,12s0.03,0.77,0.09,1.14l-2.19,2.13l2,3.46l2.92-0.83c0.6,0.48,1.27,0.87,2,1.14L10,22h4 l0.74-2.96c0.73-0.27,1.4-0.66,2-1.14l2.92,0.83l2-3.46l-2.19-2.13c0.06-0.37,0.09-0.75,0.09-1.14s-0.03-0.77-0.09-1.14l2.19-2.13 l-2-3.46L16.74,6.1c-0.6-0.48-1.27-0.87-2-1.14L14,2L14,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M13.18,4l0.24,1.2L13.58,6h0.82H19v7h-5.18l-0.24-1.2L13.42,11H12.6H6V4H13.18 M14,3H5v18h1v-9h6.6l0.4,2h7V5h-5.6L14,3 L14,3z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Youtube Premium</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M15.36,9.96c0,1.09-0.67,1.67-1.31,2.24c-0.53,0.47-1.03,0.9-1.16,1.6L12.85,14h-1.75l0.03-0.28 c0.14-1.17,0.8-1.76,1.47-2.27c0.52-0.4,1.01-0.77,1.01-1.49c0-0.51-0.23-0.97-0.63-1.29c-0.4-0.31-0.92-0.42-1.42-0.29 c-0.59,0.15-1.05,0.67-1.19,1.34L10.32,10H8.57l0.06-0.42c0.2-1.4,1.15-2.53,2.42-2.87c1.05-0.29,2.14-0.08,2.98,0.57 C14.88,7.92,15.36,8.9,15.36,9.96z M12,18c0.55,0,1-0.45,1-1s-0.45-1-1-1s-1,0.45-1,1S11.45,18,12,18z M12,3c-4.96,0-9,4.04-9,9 s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Help</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="d-flex align-items-center nav-link text-dark">
+                <svg style="height:24px;flex-shrink:0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                    focusable="false" class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M13,14h-2v-2h2V14z M13,5h-2v6h2V5z M19,3H5v16.59l3.29-3.29L8.59,16H9h10V3 M20,2v15H9l-5,5V2H20L20,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span>Send feedback</span>
+            </a>
+        </li>
+        <hr>
+      </ul> 
+      <ul class="nav nav-footer mb-3">
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Press</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Copyright</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Creator</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Advertise</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Developer</a>
+        </li> 
+      </ul>    
+      <ul class="nav nav-footer mb-3">
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Terms</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Privacy</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Policy & Safety</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">how Youtube works</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link text-dark">Test new features</a>
+        </li>   
+      </ul>
+      <ul class="nav nav-footer mb-3">
+        <li class="nav-item">
+            <a href="#" class="nav-link fw-light text-dark">© 2023 Google LLC </a>
+        </li> 
+      </ul>
+</div>
+<div class="page-content">
+    <div class="category-container d-flex align-items-center">
+        <div class="category active">All</div>
+        <div class="category">JavaScript</div>
+        <div class="category">Computer science</div>
+        <div class="category">Mixes</div>
+        <div class="category">Music</div>
+        <div class="category">Computer science</div>
+        <div class="category">Google Tech</div>
+        <div class="category">Facebook</div>
+        <div class="category">Web Application</div>
+        <div class="category">Node Js</div>
+        <div class="category">Web development</div>
+        <div class="category">Design</div>
+        <div class="category">QA</div>
+        <div class="category">SEO</div>
+        <div class="category">Front End Development</div>
+        <div class="category">Software Engineering</div>
+        <div class="category">Harvard</div>
+        <div class="category">New York</div>
+        <div class="category">Developer</div>
+        <div class="category">Mobile Design</div>
+        <div class="category">Interactive Template</div>
+        <div class="category">Analyst</div>
+        <div class="category">Angular Project</div>
+        <div class="category">AWS Project</div>
+    </div>
+
+    <div class="container p-5 py-3">
+        <div class="row mt-5    ">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/aevy-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/aevy-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Here Is Why Zerodha Made 2000 CRORES</h4>
+                                <div>Aevy TV</div>
+                                <div>62K views • 2 days ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/gully-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/gully-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>How to Make Cane's SECRET SAUCE?</h4>
+                                <div>GoldenGully</div>
+                                <div>7.5K views • 57 minutes ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/pathan-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/pathan-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Pathaan conversations with Siddharth Anand</h4>
+                                <div>YRF</div>
+                                <div>70K views • 45 minutes ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/ryan-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/ryan-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Best Supporting Actors</h4>
+                                <div>Ryan Reynolds</div>
+                                <div>8.5M views • 1 year ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/coder-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/coder-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Stop wasting time when you're learning to code!</h4>
+                                <div>Coder Coder</div>
+                                <div>1.3M views • 1 year ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/waka-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/waka-s.jpg  " width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Google sings WAKA WAKA ⚽️ | Google...</h4>
+                                <div>Aju A'kay</div>
+                                <div>4.2M views • 1 month ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/jordan-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/jordan-s.jpg" width="40" alt="">
+                            </div>
+                            <div><h4>JORDAN PETERSON: "Chat GPT and AI WILL..."</h4>
+                                <div>Get Sh*t Done</div>
+                                <div>1.3M views • 3 weeks ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/uncle-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/uncle-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                
+                                <h4> Nigel Ng & Uncle Roger Answer the Web's Most...</h4>
+                                <div>WIRED</div>
+                                <div>2.1M views •1 month ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/rob-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/rob-s.jpg" width="40" alt="">
+                            </div>
+                            <div><h4>if old music had modern lyrics</h4>
+                                <div>rob</div>
+                                <div>1.6M views • 10 months ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/dorian-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/dorian-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>My Minimalist Ergonomic Desk Setup For...</h4>
+                                <div>Dorian Develops</div>
+                                <div>5.2K views • 2 years ago</div>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/mauli-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/mauli-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>S.S. Rajamouli Received Help from Fans for...</h4>
+                                <div>Late Night with Seth Meyers</div>
+                                <div>2.6M views • 5 days ago</div>
+                            </div>
+                     </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/rrr-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/rrr-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>The Beauty Of RRR</h4>
+                                <div>The Beauty Of</div>
+                                <div>301K views • 7 days ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/asian-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/asian-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>How Asians Negotiate A Bargain</h4>
+                                <div>Korean Comic</div>
+                                <div>1.1M views • 7 months ago </div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/dose-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/dose-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>A Snake Eating Itself</h4>
+                                <div>Daily Dose Of Internet</div>
+                                <div>14M views • 1 year ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/albert-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/albert-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>Special Sentient Sandwich</h4>
+                                <div>albert_cancook</div>
+                                <div>1.4M views • 9 months ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/subway-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/subway-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>I played Subway Surfers for 10 hours straight</h4>
+                                <div>EazySpeezy</div>
+                                <div>2.3M views • 4 months ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/cake-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/cake-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>The Headphones!</h4>
+                                <div>Amaury Guichon</div>
+                                <div>988K views • 6 months ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/spooder-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/spooder-s.jpg" width="40" alt="">
+                            </div>
+                            <div> 
+                                <h4>Spooder-Man Movie Trailer</h4>
+                                <div>Laugh Over Life</div>
+                                <div>7.9M views • 1 month ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/pew-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/pew-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>THIS MADE ME EMOTIONAL</h4>
+                                <div>PewDiePie Highlights</div>
+                                <div>2M views • 3 months ago</div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <a href="#" class="card card-video border-0 bg-transparent mb-4">
+                        <img class="img-fluid" src="images/content-thumbs/squid-l.webp" alt="">
+                        <div class="card-video-details d-flex mt-2">
+                            <div class="me-2">
+                                <img src="images/content-thumbs/squid-s.jpg" width="40" alt="">
+                            </div>
+                            <div>
+                                <h4>If Squidward Got Everything He EVER...</h4>
+                                <div>Avocado Animations</div>
+                                <div>2M views • 1 month ago</div>
+                            </div>
+                     </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>     
+</body>
+</html>
